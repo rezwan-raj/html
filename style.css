@@ -1,3 +1,7 @@
+/* =====================================================
+   RESET
+===================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,17 +9,27 @@
 }
 
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f6f2;
-    color: #222;
+html {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 
-/* ================= HEADER ================= */
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f8f6f2;
+    color: #222;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
 
 .header {
-    height: 75px;
+    min-height: 75px;
 
     background-color: #111111;
     color: white;
@@ -32,6 +46,7 @@ body {
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 2px;
+    white-space: nowrap;
 }
 
 
@@ -42,6 +57,7 @@ body {
 
 nav {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
@@ -62,6 +78,7 @@ nav a:hover {
 
 .header-icons {
     display: flex;
+    align-items: center;
     gap: 20px;
     font-size: 20px;
 }
@@ -72,15 +89,17 @@ nav a:hover {
 }
 
 
-/* ================= HERO ================= */
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero {
     min-height: 600px;
 
     background:
         linear-gradient(
-            rgba(0, 0, 0, 0.05),
-            rgba(0, 0, 0, 0.05)
+            rgba(0, 0, 0, 0.20),
+            rgba(0, 0, 0, 0.20)
         ),
         url("shirtss.png");
 
@@ -90,13 +109,14 @@ nav a:hover {
     display: flex;
     align-items: center;
 
-    padding-left: 10%;
+    padding: 60px 10%;
 
     color: white;
 }
 
 
 .hero-content {
+    width: 100%;
     max-width: 600px;
 }
 
@@ -105,7 +125,6 @@ nav a:hover {
     color: #e0bd4f;
 
     font-size: 14px;
-
     letter-spacing: 4px;
 
     margin-bottom: 20px;
@@ -154,11 +173,12 @@ nav a:hover {
 }
 
 
-/* ================= SECTION TITLE ================= */
+/* =====================================================
+   SECTION TITLE
+===================================================== */
 
 .section-title {
     text-align: center;
-
     margin-bottom: 45px;
 }
 
@@ -167,7 +187,6 @@ nav a:hover {
     color: #c9a227;
 
     font-size: 13px;
-
     letter-spacing: 3px;
 
     margin-bottom: 10px;
@@ -179,7 +198,9 @@ nav a:hover {
 }
 
 
-/* ================= CATEGORY ================= */
+/* =====================================================
+   CATEGORY
+===================================================== */
 
 .categories {
     padding: 80px 7%;
@@ -187,8 +208,9 @@ nav a:hover {
 
 
 .category-container {
-    display: flex;
+    width: 100%;
 
+    display: flex;
     justify-content: center;
 
     gap: 25px;
@@ -197,11 +219,9 @@ nav a:hover {
 
 .category-card {
     width: 350px;
-
     height: 400px;
 
     position: relative;
-
     overflow: hidden;
 
     background-color: white;
@@ -244,38 +264,40 @@ nav a:hover {
 
 .category-content h3 {
     font-size: 24px;
-
     margin-bottom: 10px;
 }
 
 
 .category-content a {
     color: #e0bd4f;
-
     text-decoration: none;
 }
 
 
-/* ================= PRODUCTS ================= */
+/* =====================================================
+   PRODUCTS
+===================================================== */
 
 .products {
     padding: 80px 7%;
-
     background-color: white;
 }
 
 
 .product-container {
+    width: 100%;
+
     display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 
     gap: 25px;
 }
 
 
 .product-card {
+    min-width: 0;
+
     background-color: #fff;
 
     border: 1px solid #eee;
@@ -296,7 +318,6 @@ nav a:hover {
     height: 320px;
 
     position: relative;
-
     overflow: hidden;
 
     background-color: #f5f5f5;
@@ -318,6 +339,8 @@ nav a:hover {
 }
 
 
+/* Discount / New */
+
 .discount,
 .new {
     position: absolute;
@@ -330,7 +353,6 @@ nav a:hover {
     padding: 7px 12px;
 
     font-size: 11px;
-
     font-weight: bold;
 }
 
@@ -346,6 +368,8 @@ nav a:hover {
     color: white;
 }
 
+
+/* Quick View */
 
 .quick-view {
     position: absolute;
@@ -371,6 +395,8 @@ nav a:hover {
     bottom: 0;
 }
 
+
+/* Product Info */
 
 .product-info {
     padding: 20px;
@@ -446,12 +472,13 @@ nav a:hover {
 
 .cart-button:hover {
     background-color: #111;
-
     color: white;
 }
 
 
-/* ================= OFFER ================= */
+/* =====================================================
+   OFFER
+===================================================== */
 
 .offer {
     min-height: 350px;
@@ -463,10 +490,17 @@ nav a:hover {
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
     text-align: center;
+
+    padding: 50px 20px;
+}
+
+
+.offer-content {
+    width: 100%;
+    max-width: 800px;
 }
 
 
@@ -498,7 +532,9 @@ nav a:hover {
 }
 
 
-/* ================= RAJ SECTION ================= */
+/* =====================================================
+   RAJ SECTION
+===================================================== */
 
 .raj-section {
     padding: 80px 7%;
@@ -506,6 +542,8 @@ nav a:hover {
 
 
 .raj-container {
+    width: 100%;
+
     display: flex;
 
     justify-content: center;
@@ -573,9 +611,91 @@ nav a:hover {
 }
 
 
-/* ================= FOOTER ================= */
+/* =====================================================
+   MEET WITH SECTION
+===================================================== */
+
+.sadik-section {
+    width: 100%;
+
+    background-color: #544848;
+
+    padding: 60px 7%;
+}
+
+
+.change {
+    text-align: center;
+
+    font-weight: bold;
+
+    color: wheat;
+
+    padding: 22px;
+
+    font-size: 32px;
+}
+
+
+.container {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 30px;
+}
+
+
+.column {
+    width: 300px;
+
+    background-color: white;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+.column h2 {
+    margin-bottom: 15px;
+}
+
+
+.column h2 a {
+    color: #111;
+}
+
+
+.column p {
+    margin-top: 10px;
+}
+
+
+.column img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer {
+    width: 100%;
+
     background-color: #111;
 
     color: white;
@@ -623,6 +743,8 @@ footer {
     text-decoration: none;
 
     margin-bottom: 10px;
+
+    word-break: break-word;
 }
 
 
@@ -644,271 +766,553 @@ footer {
 }
 
 
-/* ================= RESPONSIVE ================= */
+/* =====================================================
+   TABLET
+   601px - 1000px
+===================================================== */
 
-@media (max-width: 1000px) {
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+
+    /* Header */
+
+    .header {
+        padding: 0 5%;
+    }
 
     nav {
         display: none;
     }
 
-    .product-container {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .footer-content {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .header {
-        padding: 0 5%;
-    }
-
-
-    .header-icons {
-        gap: 10px;
-    }
-
-
-    .hero {
-        min-height: 500px;
-
-        padding: 30px;
-    }
-
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
-
-    .categories,
-    .products,
-    .raj-section {
-        padding: 60px 5%;
-    }
-
-
-    .category-container,
-    .raj-container {
-        flex-direction: column;
-    }
-
-
-    .category-card,
-    .raj-column {
-        width: 100%;
-    }
-
-
-    .product-container {
-        grid-template-columns: 1fr;
-    }
-
-
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-
-
-    .offer h2 {
-        font-size: 35px;
-    }
-
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 200px;
-}
-
-.column {
-    width: 300px;
-    height: 280px;
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-    box-sizing: border-box;
-    text-align:start;
-    text-align: center;
-    
-}
-.column h2 {
-    margin-bottom: 15px;
-    
-}
-
-
-.column p {
-    margin-top: 10px;
-}
-
-
-.column img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.sadik-section{
-    background-color:#544848
-}
-
-
-.change{
-    text-align: center;
-    font-weight: bold;
-    color: wheat;
-    padding: 22px;
-}
-
-
-/* ================= MOBILE RESPONSIVE ================= */
-
-@media (max-width: 600px) {
-
-    /* Header */
-    .header {
-        height: 65px;
-        padding: 0 5%;
-    }
-
-    .logo {
-        font-size: 18px;
-    }
-
-    .header-icons {
-        gap: 10px;
-        font-size: 18px;
-    }
-
 
     /* Hero */
+
     .hero {
-        min-height: 500px;
-        padding: 40px 25px;
-        background-position: center;
-    }
+        min-height: 550px;
 
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .small-title {
-        font-size: 11px;
-        letter-spacing: 2px;
+        padding: 50px 7%;
     }
 
     .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero-description {
-        font-size: 15px;
+        font-size: 52px;
     }
 
 
-    /* Section Title */
-    .section-title h2 {
-        font-size: 30px;
-    }
+    /* Categories */
 
-
-    /* Category */
     .categories {
-        padding: 50px 5%;
+        padding: 70px 5%;
     }
 
     .category-container {
-        flex-direction: column;
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
         gap: 20px;
     }
 
     .category-card {
         width: 100%;
-        height: 350px;
+    }
+
+    .category-card:last-child {
+        grid-column: span 2;
+
+        width: 50%;
+
+        justify-self: center;
     }
 
 
     /* Products */
+
     .products {
-        padding: 50px 5%;
+        padding: 70px 5%;
     }
 
     .product-container {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
         gap: 20px;
     }
+
+
+    /* Offer */
+
+    .offer h2 {
+        font-size: 45px;
+    }
+
+
+    /* Raj Section */
+
+    .raj-section {
+        padding: 70px 5%;
+    }
+
+    .raj-container {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .raj-column {
+        width: 100%;
+    }
+
+    .raj-column:last-child {
+        grid-column: span 2;
+
+        width: 50%;
+
+        justify-self: center;
+    }
+
+
+    /* Meet With */
+
+    .sadik-section {
+        padding: 60px 5%;
+    }
+
+    .container {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 25px;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .column:last-child {
+        grid-column: span 2;
+
+        width: 50%;
+
+        justify-self: center;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .footer-content {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 35px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   600px AND BELOW
+===================================================== */
+
+@media screen and (max-width: 600px) {
+
+    /* =================================================
+       HEADER
+    ================================================= */
+
+    .header {
+        min-height: 65px;
+
+        padding: 0 5%;
+
+        gap: 10px;
+    }
+
+
+    .logo {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+
+    nav {
+        display: none;
+    }
+
+
+    .header-icons {
+        gap: 10px;
+
+        font-size: 17px;
+    }
+
+
+    /* =================================================
+       HERO
+    ================================================= */
+
+    .hero {
+        min-height: 500px;
+
+        padding: 40px 25px;
+
+        background-position: center;
+    }
+
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+
+    .small-title {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .hero h1 {
+        font-size: 40px;
+
+        line-height: 1.15;
+    }
+
+
+    .hero-description {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+
+    .shop-button {
+        padding: 13px 25px;
+    }
+
+
+    /* =================================================
+       SECTION TITLE
+    ================================================= */
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+
+    .section-title p {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+
+    /* =================================================
+       CATEGORY
+    ================================================= */
+
+    .categories {
+        padding: 55px 5%;
+    }
+
+
+    .category-container {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+    }
+
+
+    .category-card {
+        width: 100%;
+
+        max-width: 400px;
+
+        height: 350px;
+    }
+
+
+    /* =================================================
+       PRODUCTS
+    ================================================= */
+
+    .products {
+        padding: 55px 5%;
+    }
+
+
+    .product-container {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .product-card {
+        width: 100%;
+    }
+
 
     .product-image {
         height: 350px;
     }
 
 
-    /* Offer */
+    .product-info {
+        padding: 18px;
+    }
+
+
+    /* =================================================
+       OFFER
+    ================================================= */
+
     .offer {
         min-height: 300px;
+
         padding: 40px 20px;
     }
 
+
     .offer h2 {
         font-size: 35px;
+
+        line-height: 1.2;
     }
 
 
-    /* Raj Section */
+    .offer-content p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    /* =================================================
+       RAJ SECTION
+    ================================================= */
+
     .raj-section {
-        padding: 50px 5%;
+        padding: 55px 5%;
     }
+
 
     .raj-container {
+        display: flex;
+
         flex-direction: column;
+
+        align-items: center;
+
         gap: 20px;
     }
+
 
     .raj-column {
         width: 100%;
+
+        max-width: 400px;
     }
 
 
-    /* Meet With Section */
+    .raj-column img {
+        height: 250px;
+    }
+
+
+    /* =================================================
+       MEET WITH
+    ================================================= */
+
     .sadik-section {
-        padding: 20px 5%;
+        width: 100%;
+
+        padding: 40px 5%;
     }
+
+
+    .change {
+        font-size: 28px;
+
+        padding: 15px;
+    }
+
 
     .container {
+        width: 100%;
+
+        display: flex;
+
         flex-direction: column;
-        gap: 20px;
+
         align-items: center;
+
+        gap: 20px;
     }
+
 
     .column {
         width: 100%;
+
         max-width: 350px;
+
         height: auto;
+
         margin: 0;
+
+        padding: 20px;
+
+        text-align: center;
     }
+
+
+    .column h2 {
+        font-size: 24px;
+
+        margin-bottom: 15px;
+    }
+
 
     .column img {
-        height: 220px;
+        width: 100%;
+
+        height: auto;
+
+        max-height: 300px;
+
+        object-fit: cover;
     }
 
 
-    /* Footer */
+    .column p {
+        font-size: 16px;
+
+        margin-top: 15px;
+    }
+
+
+    /* =================================================
+       FOOTER
+    ================================================= */
+
     footer {
-        padding: 50px 5% 0;
+        padding: 50px 7% 0;
     }
+
 
     .footer-content {
+        display: grid;
+
         grid-template-columns: 1fr;
+
         gap: 30px;
+
+        padding-bottom: 40px;
+    }
+
+
+    .footer-content h2 {
+        font-size: 22px;
+    }
+
+
+    .footer-content h3 {
+        font-size: 18px;
+    }
+
+
+    .copyright {
+        padding: 18px 5px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+   400px AND BELOW
+===================================================== */
+
+@media screen and (max-width: 400px) {
+
+    .logo {
+        font-size: 15px;
+    }
+
+
+    .header-icons {
+        font-size: 15px;
+
+        gap: 7px;
+    }
+
+
+    .hero {
+        min-height: 480px;
+
+        padding: 35px 20px;
+    }
+
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+
+    .category-card {
+        height: 320px;
+    }
+
+
+    .product-image {
+        height: 320px;
+    }
+
+
+    .offer h2 {
+        font-size: 30px;
+    }
+
+
+    .column {
+        max-width: 100%;
+    }
+
+
+    .column img {
+        max-height: 260px;
     }
 
 }
